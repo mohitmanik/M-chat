@@ -3,15 +3,16 @@ import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail } from "firebase/auth";
 import { getFirestore, setDoc, doc, query, where,collection, getDoc, getDocs } from "firebase/firestore";
 import { toast } from "react-toastify";
+import { preprocessCSS } from "vite";
 
 // Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDEECAD1Fr8sfAuXdoLne7acU2lxGG7JFA",
-    authDomain: "mchat-e2a2e.firebaseapp.com",
-    projectId: "mchat-e2a2e",
-    storageBucket: "mchat-e2a2e.firebasestorage.app",
-    messagingSenderId: "897754459610",
-    appId: "1:897754459610:web:c2ad639dcb6916c834a4e3"
+    apiKey: process.env.VITE_API_KEY,
+    authDomain: process.env.VITE_DOMAIN,
+    projectId: process.env.VITE_APP_ID,
+    storageBucket: process.env.VITE_BUCKET,
+    messagingSenderId: process.env.VITE_SENDER_ID,
+    appId: ""
 };
 
 // Initialize Firebase
