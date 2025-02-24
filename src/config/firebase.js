@@ -3,15 +3,14 @@ import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail } from "firebase/auth";
 import { getFirestore, setDoc, doc, query, where,collection, getDoc, getDocs } from "firebase/firestore";
 import { toast } from "react-toastify";
-import { preprocessCSS } from "vite";
 
 // Firebase configuration
 const firebaseConfig = {
-    apiKey: process.env.VITE_API_KEY,
-    authDomain: process.env.VITE_DOMAIN,
-    projectId: process.env.VITE_APP_ID,
-    storageBucket: process.env.VITE_BUCKET,
-    messagingSenderId: process.env.VITE_SENDER_ID,
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
     appId: ""
 };
 
